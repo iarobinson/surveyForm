@@ -3,5 +3,22 @@ body {
 }
 
 legend {
-  font-size: 5em;
+  font-size: 2em;
+}
+
+form {
+  line-height: 2em;
+}
+
+#container {
+  margin: 10px 100px 100px 100px;
+}
+
+#start-button {
+  margin-top: 40px;
+}
+
+#self-generated-nice-thing {
+  height: 10%;
+  width: 50%;
 }

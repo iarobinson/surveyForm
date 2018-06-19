@@ -6,48 +6,95 @@
   <script src="surveyForm.js"></script>
 </head>
 <body>
-  <h1 id="title">Gratitude Survey</h1>
-  <p id="description">Here you can provide the details of what you are grateful for.</p>
-  <form id="survey-form">
-    <fieldset>
-      <legend>The Gratitude Survey</legend>
-      <div>
-        <label id="name-label">What is your name?</label>
-        <input type="text" id="name" placeholder="Your Name"></input>
-      </div>
-      <div>
-        <label id="email-label">What is your email?</label>
-        <input type="text" id="email" placeholder="Email" required></input>
-      </div>
-      <div>
-        <label id="number-label">How old are you?</label>
-        <input type="number" id="number" placeholder="22" min="6" max="120"></field>
-      </div>
-      <div>
-        
-      </div>
-      <button type="text" id="start-button" value="submit">Submit This Gratitude Survey</button>
-    </fieldset>
-  </form>
-  
+  <div id="container">
+    <h1 id="title">Take this Survey to Feel Good</h1>
+    <p id="description">Thinking critically about the good things makes people happier. Here's an opportunity to do that.</p>
+    <form id="survey-form">
+      <fieldset>
+        <legend>The Gratitude Survey</legend>
+        <div>
+          <label id="name-label">What is a name of someone you love?</label>
+          <div>
+            <input type="text" id="name" placeholder="Your Name"></input>
+          </div>
+        </div>
+        <div>
+          <label id="email-label">What is your email?</label>
+          <div>
+            <input type="text" id="email" placeholder="Email" required></input>
+          </div>
+        </div>
+        <div>
+          <label id="number-of-good-things-label">How many good things happened to you yesterday?</label>
+          <div>
+            <input type="number" id="number" placeholder="22" min="6" max="120"></field>
+          </div>
+        </div>
+        <div>
+          <label id="element-label">Which of these elements do you feel most at home with now?</label>
+            <div>
+            <select name="genderSelect">
+              <option value="earth">Earth</option>
+              <option value="wind">Wind</option>
+              <option value="fire">Fire</option>
+              <option value="air">Air</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label id="contact-method-label">Which are you loving the most now?</label>
+          <div>
+            <input type="radio" id="iLoveSports" name="contact" value="sportLover">
+            <label for="sportsChoice">Sport</label>
 
-  <h2>CheckList</h2>
-<p><del>User Story #1: I can see a title with id="title" in H1 sized text.</del></p>
-<p><del>User Story #2: I can see a short explanation with id="description" in P sized text.</del></p>
-<p><del>User Story #3: I can see a form with id="survey-form".</del></p>
-<p><del>User Story #4: Inside the form element, I am required to enter my name in a field with id="name".</del></p>
-<p><del>User Story #5: Inside the form element, I am required to enter an email in a field with id="email".</del></p>
-<p>User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.</p>
-<p><del>User Story #7: Inside the form, I can enter a number in a field with id="number".</del></p>
-<p>User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.</p>
-<p>User Story #9: If I enter numbers outside the range of the number input, I will see an HTML5 validation error.</p>
-<p><del>User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".</del></p>
-<p><del>User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.</del></p>
-<p>User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".</p>
-<p>User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.</p>
-<p>User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.</p>
-<p>User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.</p>
-<p>User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.</p>
+            <input type="radio" id="iLoveArt" name="contact" value="artLover">
+            <label for="artChoice">Art</label>
 
+            <input type="radio" id="iLoveAdventure" name="contact" value="adventureLover">
+            <label for="adventureChoice">Adventure</label>
+
+            <input type="radio" id="iLoveEnterprise" name="contact" value="enterpriseLover">
+            <label for="enterpriseChoice">Enterprise</label>
+          </div>
+        </div>
+        <div>
+          <label id="the-good-things">The things you have enjoyed these last few days:</label>
+          <div>
+            <input type="checkbox" id="water" name="good-things" value="Air">Air to Breathe
+            <input type="checkbox" id="shelter" name="good-things" value="Shelter">An indoor bed
+            <input type="checkbox" id="food" name="good-things" value="Food">Food to survive the week
+            <input type="checkbox" id="company" name="good-things" value="Friends">Friends to speak with
+          </div>
+        </div>
+        <div>
+          <label id="message-to-self">Something good about you:</label>
+          <div>
+            <input type="text" id="self-generated-nice-thing" name="personal-message" placeholder="Something nice about you...">
+          </div>
+        </div>
+        <button type="text" id="start-button" value="submit">Submit This Gratitude Survey</button>
+      </fieldset>
+    </form>
+    
+
+    <h2>CheckList</h2>
+    <p><del>User Story #1: I can see a title with id="title" in H1 sized text.</del></p>
+    <p><del>User Story #2: I can see a short explanation with id="description" in P sized text.</del></p>
+    <p><del>User Story #3: I can see a form with id="survey-form".</del></p>
+    <p><del>User Story #4: Inside the form element, I am required to enter my name in a field with id="name".</del></p>
+    <p><del>User Story #5: Inside the form element, I am required to enter an email in a field with id="email".</del></p>
+    <p>User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.</p>
+    <p><del>User Story #7: Inside the form, I can enter a number in a field with id="number".</del></p>
+    <p>User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.</p>
+    <p>User Story #9: If I enter numbers outside the range of the number input, I will see an HTML5 validation error.</p>
+    <p><del>User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".</del></p>
+    <p><del>User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.</del></p>
+    <p><del>User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".</del></p>
+    <p><del>User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.</del></p>
+    <p><del>User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.</del></p>
+    <p><del>User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.</del></p>
+    <p><del>User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.</del></p>
+
+  </div>
 </body>
 </html>
