@@ -10,6 +10,12 @@ form {
   line-height: 2em;
 }
 
+header {
+  /* background-color: black; */
+  /* color: white; */
+  position: relative;
+}
+
 #container {
   margin: 10px 100px 100px 100px;
 }
@@ -19,6 +25,5 @@ form {
 }
 
 #self-generated-nice-thing {
-  height: 10%;
   width: 50%;
 }
