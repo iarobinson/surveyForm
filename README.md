@@ -8,8 +8,4 @@ I'd like to make a collection of products based on the users input. Basically I'
 
 ## Thank You
 
-Manisharann saved me a few hours from relearning and writing new Regular Expressions to test email validation form:
-
-https://github.com/manishsaraan/email-validator
-
 Big thanks to Free Code Camp. This is the best way I have found to learn to program.
