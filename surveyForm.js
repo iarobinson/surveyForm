@@ -9,19 +9,26 @@ function go() {
   selectedEleInput = document.getElementById("dropdown");
   focusInput = document.getElementsByName("contact");
   goodThingsInput = document.getElementsByName("good-things");
-  console.log(focusInput[1], goodThingsInput[1])
   userMessageInput = document.getElementById("self-generated-nice-thing");
-  // console.log(lovedOneInput, emailInput, favNumInput, selectedEleInput, userMessageInput);
 }
 
 function submissionClick() {
+  // console.log(focusInput, goodThingsInput)
   nameOfLovedOne = lovedOneInput.value;
   email = emailInput.value;
   favNum = favNumInput.value;
   selectedEle = selectedEleInput.value;
   focus = focusInput.value;
-  goodThings = goodThingsInput.value;
-  console.log(focusInput[1], goodThingsInput[1])
+  goodThings = [];
+  
+  for (var i = 0; i < goodThingsInput.length; i += 1) {
+    if (goodThingsInput[i].type == "checkbox") {
+      if (goodThingsInput[i].checked == true) {
+        goodThings.push(goodThingsInput[i].value);
+      }
+    }
+  }
+
   userMessage = userMessageInput.value;
   alert(`
     Remember that ${nameOfLovedOne} loves you and 
@@ -30,7 +37,7 @@ function submissionClick() {
     in the short term.
     It's good that you're focused on ${focus}.
     Don't forget the things you have to be grateful for:
-    ${goodThings}.
+    ${goodThings.join(", ")}.
     Your words are powerful. Here they are: 
     ${userMessage}
     `);
