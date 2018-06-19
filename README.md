@@ -8,4 +8,8 @@ I'd like to make a collection of products based on the users input. Basically I'
 
 ## Thank You
 
+Simple mobile responsiveness thanks to Skeleton
+- http://getskeleton.com/
+- https://github.com/dhg/Skeleton
+
 Big thanks to Free Code Camp. This is the best way I have found to learn to program.

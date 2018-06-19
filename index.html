@@ -2,40 +2,37 @@
 <head>
   <meta charset="utf-8">
   <title>Survey Form by Ian Robinson</title>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="surveyForm.css">
   <script src="surveyForm.js"></script>
-  <script src="validate.js"></script>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </head>
 <body>
   <div id="container">
-    <header>
-      <h1 id="title">Take this Survey to Feel Good</h1>
-      <p id="description">Thinking critically about the good things makes people happier. Here's an opportunity for you to do that.</p>
-    </header>
     <form id="survey-form">
       <fieldset>
-        <legend>The Gratitude Survey</legend>
+        <h1 id="title">The Gratitude Survey</h1>
+        <p id="description">Being grateful probably makes people happier. Here's an opportunity for you to practice gratitude. There is a gift if you complet the form.</p>
         <div>
           <label id="name-label">What is a name of someone you love?</label>
           <div>
-            <input type="text" id="name" placeholder="Your Name" required></input>
+            <input type="text" id="name" placeholder="Name of loved one" required></input>
           </div>
         </div>
         <div>
           <label id="email-label">What is your email?</label>
           <div>
-            <input type="email" id="email" placeholder="Email" required oninvalid="validate(this)"></input>
+            <input type="email" id="email" placeholder="Email" required></input>
           </div>
         </div>
         <div>
-          <label id="number-label">How many good things happened to you yesterday?</label>
+          <label id="number-label">What is your favorite number?</label>
           <div>
-            <input type="number" id="number" placeholder="22" min="6" max="120"></field>
+            <input type="number" id="number" placeholder="Favorite Number" min="0" max="500"></field>
           </div>
         </div>
         <div>
-          <label id="element-label">Which of these elements do you feel most at home with now?</label>
+          <label id="element-label">Which element do you resonate with most right now?</label>
             <div>
             <select name="elementSelect" id="dropdown">
               <option value="earth">Earth</option>
@@ -46,28 +43,28 @@
           </div>
         </div>
         <div>
-          <label id="contact-method-label">Which are you loving the most now?</label>
-          <div>
-            <input type="radio" id="iLoveSports" name="contact" value="sportLover">
-            <label for="sportsChoice">Sport</label>
+          <label id="contact-method-label">Which area of life are you most focused on now?</label>
+          <div class="loved-activities">
+            <ul>
+              <li><input type="radio" id="iLoveSports" name="contact" value="sportLover"> Sport</li>
 
-            <input type="radio" id="iLoveArt" name="contact" value="artLover">
-            <label for="artChoice">Art</label>
+              <li><input type="radio" id="iLoveArt" name="contact" value="artLover"> Art</li>
 
-            <input type="radio" id="iLoveAdventure" name="contact" value="adventureLover">
-            <label for="adventureChoice">Adventure</label>
+              <li><input type="radio" id="iLoveAdventure" name="contact" value="adventureLover"> Adventure</li>
 
-            <input type="radio" id="iLoveEnterprise" name="contact" value="enterpriseLover">
-            <label for="enterpriseChoice">Enterprise</label>
+              <li><input type="radio" id="iLoveEnterprise" name="contact" value="enterpriseLover"> Enterprise</li>
+            </ul>
           </div>
         </div>
         <div>
           <label id="the-good-things">The things you have enjoyed these last few days:</label>
-          <div>
-            <input type="checkbox" id="water" name="good-things" value="Air">Air to Breathe
-            <input type="checkbox" id="shelter" name="good-things" value="Shelter">An indoor bed
-            <input type="checkbox" id="food" name="good-things" value="Food">Food to survive the week
-            <input type="checkbox" id="company" name="good-things" value="Friends">Friends to speak with
+          <div class="good-things">
+            <ul>
+              <li><input type="checkbox" id="food" name="good-things" value="Food"> Food to survive the week</li>
+              <li><input type="checkbox" id="company" name="good-things" value="Friends"> Friends to speak with</li>
+              <li><input type="checkbox" id="shelter" name="good-things" value="Shelter"> An indoor bed</li>
+              <li><input type="checkbox" id="water" name="good-things" value="Air"> Air to breathe</li>
+            </ul>
           </div>
         </div>
         <div>
@@ -76,7 +73,7 @@
             <textarea type="text" id="self-generated-nice-thing" name="personal-message" placeholder="Something nice about you..."></textarea>
           </div>
         </div>
-        <button type="text" id="submit">Submit This Gratitude Survey</button>
+        <button type="submit" id="submit" onclick="submissionClick();">Submit This Gratitude Survey</button>
       </fieldset>
     </form>
   </div>
