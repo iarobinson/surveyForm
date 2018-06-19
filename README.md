@@ -4,7 +4,10 @@ The user can use this survey over and over again to critically think about the t
 
 ## Improvements
 
-I'd like to make a collection of products based on the users input. Basically I'd like to make a collection of art that is based on the elements and the things the person generates. For example, if the user like fire and art, they get an artistic image of fire with the name of the person they love and the things they are interested in written over the top of it.
+### Generate Image and email it to User 
+I'd like for this front end to render and send an image to the user. The image would have a background based on their element selection, characters based on their focus ($ for enterprise, paintBrush for art, etc) and a list of things they have to be grateful for.
+
+For example, if the user like fire and art, they get an artistic image of fire with the name of the person they love, a graphic of their focus, the small things they have and the things they are interested in written over the top of the image.
 
 ## Thank You
 
